@@ -1,0 +1,27 @@
+* {
+	font-family: 'Poppins', sans-serif;
+}
+
+.nav li {
+	list-style: none;
+	padding: 30px;
+}
+
+.nav li a {
+	text-decoration: none;
+	color: #0d0d0d;
+	font-size: larger;
+}
+
+.nav,
+ul,
+li,
+a {
+	background-color: white;
+}
+
+.navHome {
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	text-align: center;
+}
