@@ -1,6 +1,6 @@
 import React from 'react';
 import './compStyles/Navbar.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink as Link } from 'react-router-dom';
 
 const Navbar = () => {
 	return (
@@ -8,15 +8,18 @@ const Navbar = () => {
 			<nav>
 				<ul className='navHome'>
 					<li>
-						<NavLink to='/'>Home</NavLink>
+						<Link to='/#mainPage' smooth>
+							Home
+						</Link>
+					</li>
+					<li>
+						<Link to='/#restPage' smooth>
+							Restaurants
+						</Link>
 					</li>
 
 					<li>
-						<NavLink to='/Restaurants'>Restaurants</NavLink>
-					</li>
-
-					<li>
-						<NavLink to='/Friends'>Friends</NavLink>
+						<Link to='/Friends'>Friends</Link>
 					</li>
 				</ul>
 			</nav>
