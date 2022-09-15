@@ -1,0 +1,16 @@
+#mainPage {
+	background-image: url('/public/images/AdobeStock_315562154.jpeg');
+	background-size: 100% 135%;
+	text-align: center;
+	padding-bottom: 6%;
+}
+
+#mainPage h1 {
+	padding: 20%;
+	padding-right: 44%;
+	font-size: 300%;
+}
+
+#mainPage p {
+	padding-right: 15%;
+}

@@ -1,0 +1,103 @@
+.bigDiv {
+	margin-bottom: 10%;
+}
+
+.bigDiv img {
+	height: 100px;
+	width: 100px;
+	border-radius: 50px;
+}
+.friendHeading {
+	padding-top: 5%;
+	padding-bottom: 5%;
+	text-align: center;
+	background-size: 100% 450%;
+	background-image: linear-gradient(rgba(255, 49, 3, 0), rgb(255, 255, 255)),
+		url('/public/images/AdobeStock_315620808.jpeg');
+}
+.bigDiv h1 {
+	text-align: center;
+	margin-bottom: 5%;
+	font-size: 300%;
+}
+
+#friendPage {
+	display: grid;
+	grid-template-columns: 45% 5% 45%;
+	margin-left: 5%;
+}
+
+.friendContainer {
+	overflow: auto;
+	height: 550px;
+	border-style: solid;
+	border-width: 3px;
+	border-color: black;
+	padding: 4%;
+}
+
+.friendContainer h1 {
+	font-size: xx-large;
+	margin-bottom: 0;
+}
+
+.friendInfo {
+	display: grid;
+	grid-template-columns: 20% 60% 20%;
+	text-align: center;
+	border-bottom: 2px solid black;
+	border-radius: 10px;
+	margin-bottom: 7%;
+	border-top: 2px solid black;
+	padding-top: 7px;
+}
+
+.boxHeader {
+	padding-bottom: 12%;
+}
+
+.bigDiv span {
+	color: red;
+}
+
+.bigDiv button {
+	padding: 7px;
+	color: white;
+	background-color: red;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.historyContainer {
+	overflow: auto;
+	height: 550px;
+	border-style: solid;
+	border-width: 3px;
+	border-color: black;
+	margin-top: 13%;
+	margin-left: 13%;
+	margin-right: 13%;
+	text-align: center;
+}
+
+.historyContainer h1 {
+	font-size: xx-large;
+}
+
+.historyContainer p {
+	font-size: x-large;
+}
+.historyInfo {
+	border-bottom: 2px solid black;
+	border-radius: 10px;
+	margin-bottom: 7%;
+	border-top: 2px solid black;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 0;
+}
+
+.historyHeader {
+	padding-bottom: 5%;
+}

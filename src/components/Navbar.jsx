@@ -1,6 +1,6 @@
 import React from 'react';
 import './compStyles/Navbar.css';
-import { NavLink as Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const Navbar = () => {
 	return (

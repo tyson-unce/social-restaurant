@@ -1,0 +1,164 @@
+footer {
+	bottom: 0;
+}
+.place,
+.phone,
+.email {
+	text-align: center;
+}
+.content1 {
+	margin: 130px auto;
+	text-align: center;
+	padding: 0 20px;
+}
+.content1 .text {
+	font-size: 2.5rem;
+	font-weight: 600;
+}
+.content1 .p {
+	font-size: 2.1875rem;
+	font-weight: 600;
+}
+footer {
+	bottom: 0px;
+	width: 100%;
+	background: white;
+}
+.main-content {
+	display: flex;
+}
+.main-content .box {
+	flex-basis: 50%;
+	padding: 10px 20px;
+}
+.box h2 {
+	font-size: 1.125rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.box .content {
+	margin: 20px 0 0 0;
+	position: relative;
+}
+.box .content:before {
+	position: absolute;
+	content: '';
+	top: -10px;
+	height: 2px;
+	width: 100%;
+	background: red;
+}
+.box .content:after {
+	position: absolute;
+	content: '';
+	height: 2px;
+	width: 15%;
+	background: red;
+	top: -10px;
+}
+
+.left h2 {
+	text-align: center;
+}
+.left .content p {
+	text-align: center;
+}
+
+.center .content .fas {
+	font-size: 1.4375rem;
+	background: #1a1a1a;
+	height: 45px;
+	width: 45px;
+	line-height: 45px;
+	text-align: center;
+	border-radius: 50%;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+.center .content .text {
+	font-size: 1.0625rem;
+	font-weight: 500;
+	padding-left: 10px;
+}
+.center .content .phone {
+	margin: 15px 0;
+}
+
+.center h2 {
+	text-align: center;
+	padding-left: 1%;
+}
+
+.bottom center {
+	padding: 5px;
+	font-size: 0.9375rem;
+	background: transparent;
+}
+.bottom center span {
+	color: black;
+}
+.bottom center a {
+	text-decoration: none;
+}
+.bottom center a:hover {
+	text-decoration: underline;
+}
+
+.social ul {
+	background-color: transparent;
+	list-style: none;
+	display: flex;
+}
+
+.social a {
+	background-color: transparent;
+}
+
+.social li {
+	background-color: transparent;
+	padding: 10px;
+}
+
+.social img {
+	height: 30px;
+	width: 30px;
+	border-radius: 11px;
+}
+
+.social img:hover {
+	background-color: none;
+}
+
+.socialSpacing {
+	display: grid;
+	grid-template-columns: 25% 60% 15%;
+}
+
+@media screen and (max-width: 480px) {
+	footer {
+		position: relative;
+		bottom: 0px;
+	}
+	.main-content {
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	.main-content .box {
+		margin: 5px 0;
+	}
+	.social li {
+		text-align: center;
+	}
+
+	.social {
+		position: relative;
+	}
+
+	.padding {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 775px) {
+}

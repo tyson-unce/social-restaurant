@@ -1,0 +1,68 @@
+#restPage {
+	padding-top: 2%;
+	margin-bottom: 10%;
+	background-color: #f8f9fb;
+}
+.restContent {
+	text-align: center;
+	display: grid;
+	grid-template-columns: 45% 45%;
+	grid-column-gap: 7%;
+}
+
+.restRest {
+	text-align: center;
+}
+
+.divScrolly {
+	overflow: auto;
+	height: 550px;
+	border-style: solid;
+	border-width: 3px;
+	border-color: black;
+	padding: 4%;
+}
+
+.restHeading {
+	padding-bottom: 5%;
+	text-align: center;
+}
+
+iframe {
+	height: 602px;
+	width: 100%;
+	margin-left: 5%;
+	border-color: black;
+	border-style: solid;
+	border-width: 3px;
+}
+
+.restInfo {
+	border-bottom: 2px solid black;
+	border-radius: 10px;
+	padding: 2%;
+	margin-bottom: 5%;
+}
+
+.restGrid {
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+.historyButton {
+	margin-top: 5%;
+	margin-left: 40%;
+}
+
+.restLoc {
+	text-align: left;
+}
+
+#restPage button {
+	padding: 7px;
+	color: white;
+	background-color: red;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
