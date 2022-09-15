@@ -135,4 +135,7 @@
 		display: none;
 		color: black;
 	}
+	.location {
+		margin-left: 7%;
+	}
 }
