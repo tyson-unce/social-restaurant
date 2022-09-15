@@ -17,6 +17,24 @@ const Friends = () => {
 		);
 	}, []);
 
+	const addFriend = () => {
+		Axios.post('https://yelporsumthin.herokuapp.com/discovery', {
+			email: email,
+			password: password,
+		}).then(() => {
+			console.log('Table Updated');
+		});
+	};
+
+	const addHistory = () => {
+		Axios.post('https://yelporsumthin.herokuapp.com/discovery', {
+			email: email,
+			password: password,
+		}).then(() => {
+			console.log('Table Updated');
+		});
+	};
+
 	return (
 		<div>
 			<Navbar />
