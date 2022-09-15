@@ -2,8 +2,21 @@ import React from 'react';
 import './compStyles/Friends.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import { useEffect, useState } from 'react';
+import Axios from 'axios';
 
 const Friends = () => {
+	const [discovery, showDiscovery] = useState([]);
+
+	//usEffect tells it to do something on render, in this case I'm rendering the API when my component loads
+	useEffect(() => {
+		Axios.get('https://yelporsumthin.herokuapp.com/discovery').then(
+			(response) => {
+				showDiscovery(response.data);
+			}
+		);
+	}, []);
+
 	return (
 		<div>
 			<Navbar />
@@ -33,17 +46,21 @@ const Friends = () => {
 					<div></div>
 					<div className='friendContainer'>
 						<h1 className='boxHeader'>Friends</h1>
-						<div className='friendInfo'>
-							<img src='./images/tysonUnce.jpeg'></img>
-							<h1>Samantha</h1>
-							<div className='addFButton'></div>
-							<div>pville</div>
-							<div>
-								most recent restaurant:
-								<br />
-								thai's
-							</div>
-						</div>
+						{discovery.map((val) => {
+							return (
+								<div className='friendInfo'>
+									<img src='./images/tysonUnce.jpeg'></img>
+									<h1>{val.name}</h1>
+									<div className='addFButton'></div>
+									<div>pville</div>
+									<div>
+										most recent restaurant:
+										<br />
+										thai's
+									</div>
+								</div>
+							);
+						})}
 					</div>
 				</div>
 				<div className='historyContainer'>

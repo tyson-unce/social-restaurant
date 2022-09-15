@@ -3,13 +3,13 @@ import './compStyles/Restaurants.css';
 import { useEffect, useState } from 'react';
 import Axios from 'axios';
 const Restaurants = () => {
-	const [products, showProducts] = useState([]);
+	const [restaurants, showRestaurants] = useState([]);
 
 	//usEffect tells it to do something on render, in this case I'm rendering the API when my component loads
 	useEffect(() => {
-		Axios.get('https://smartecombackend.herokuapp.com/getProducts').then(
+		Axios.get('https://yelporsumthin.herokuapp.com/restaurants').then(
 			(response) => {
-				showProducts(response.data);
+				showRestaurants(response.data);
 			}
 		);
 	}, []);
@@ -20,9 +20,9 @@ const Restaurants = () => {
 				<iframe src='https://www.google.com/maps/embed/v1/search?q=restaurants%20near%20me&key=AIzaSyBb_zO6I2OtyHIfO9vUazpYzo37wPLrKTY'></iframe>
 
 				<div className='restRest'>
-					{products.map((val) => {
-						return (
-							<div className='divScrolly'>
+					<div className='divScrolly'>
+						{restaurants.map((val) => {
+							return (
 								<div className='restInfo'>
 									<h1>{val.name}</h1>
 									<div className='restGrid'>
@@ -42,9 +42,9 @@ const Restaurants = () => {
 										</div>
 									</div>
 								</div>
-							</div>
-						);
-					})}
+							);
+						})}
+					</div>
 				</div>
 			</div>
 		</div>
