@@ -28,12 +28,33 @@ const Friends = () => {
 						<h1 className='boxHeader'>
 							Discover <span>+</span>
 						</h1>
+						{discovery.map((val) => {
+							return (
+								<div className='friendInfo'>
+									<img src={val.image}></img>
+									<h1>{val.name}</h1>
+									<div className='addFButton'>
+										<button>add friend</button>
+									</div>
+									<div>{val.location}</div>
+									<div>
+										most recent restaurant:
+										<br />
+										{val.recent}
+									</div>
+								</div>
+							);
+						})}
+					</div>
+
+					<div></div>
+					<div className='friendContainer'>
+						<h1 className='boxHeader'>Friends</h1>
+
 						<div className='friendInfo'>
 							<img src='./images/tysonUnce.jpeg'></img>
 							<h1>Samantha</h1>
-							<div className='addFButton'>
-								<button>add friend</button>
-							</div>
+							<div className='addFButton'></div>
 							<div>pville</div>
 							<div>
 								most recent restaurant:
@@ -41,26 +62,6 @@ const Friends = () => {
 								thai's
 							</div>
 						</div>
-					</div>
-
-					<div></div>
-					<div className='friendContainer'>
-						<h1 className='boxHeader'>Friends</h1>
-						{discovery.map((val) => {
-							return (
-								<div className='friendInfo'>
-									<img src='./images/tysonUnce.jpeg'></img>
-									<h1>{val.name}</h1>
-									<div className='addFButton'></div>
-									<div>pville</div>
-									<div>
-										most recent restaurant:
-										<br />
-										thai's
-									</div>
-								</div>
-							);
-						})}
 					</div>
 				</div>
 				<div className='historyContainer'>
