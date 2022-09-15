@@ -57,7 +57,7 @@ const Friends = () => {
 											add friend
 										</button>
 									</div>
-									<div>{val.location}</div>
+									<div className='location'>{val.location}</div>
 									<div>
 										<span className='hidden'>most recent</span> restaurant:
 										<br />
@@ -82,7 +82,7 @@ const Friends = () => {
 													<div className='addFButton'>
 														<button>favorite</button>
 													</div>
-													<div>{val.location}</div>
+													<div className='location'>{val.location}</div>
 													<div>
 														<span className='hidden'>most recent</span>
 														restaurant:
