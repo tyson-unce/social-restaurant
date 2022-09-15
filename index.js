@@ -34,6 +34,16 @@ app.get('/restaurants', (req, res) => {
 	});
 });
 
+app.get('/discovery', (req, res) => {
+	connection.query('SELECT * FROM discover', (err, result) => {
+		if (err) {
+			console.log(err);
+		} else {
+			res.send(result);
+		}
+	});
+});
+
 //creating post method for inserting data from frontend
 // app.post('/add', (req, res) => {
 // 	const email = req.body.email;
