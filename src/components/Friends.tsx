@@ -1,7 +1,7 @@
 import React from 'react';
 import './compStyles/Friends.css';
-import Navbar from './Navbar';
-import Footer from './Footer';
+import Navbar from './Navbar.tsx';
+import Footer from './Footer.tsx';
 import { useEffect, useState } from 'react';
 import Axios from 'axios';
 

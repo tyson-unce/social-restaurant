@@ -90,18 +90,18 @@ footer {
 	padding-left: 1%;
 }
 
-.bottom center {
+.bottom .center {
 	padding: 5px;
 	font-size: 0.9375rem;
 	background: transparent;
 }
-.bottom center span {
+.bottom .center span {
 	color: black;
 }
-.bottom center a {
+.bottom .center a {
 	text-decoration: none;
 }
-.bottom center a:hover {
+.bottom .center a:hover {
 	text-decoration: underline;
 }
 

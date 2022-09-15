@@ -1,8 +1,8 @@
 import './App.css';
-import Landing from './components/Landing';
-import Restaurants from './components/Restaurants';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Landing from './components/Landing.tsx';
+import Restaurants from './components/Restaurants.tsx';
+import Navbar from './components/Navbar.tsx';
+import Footer from './components/Footer.tsx';
 
 function App() {
 	return (

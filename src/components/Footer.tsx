@@ -68,11 +68,11 @@ const Footer = () => {
 				</div>
 			</div>
 			<div className='bottom'>
-				<center>
+				<div className='center'>
 					<span className='credit'>Created By Tyson Unce | </span>
 					<span className='far fa-copyright'></span>
 					<span> 2022 All rights reserved.</span>
-				</center>
+				</div>
 			</div>
 		</footer>
 	);
