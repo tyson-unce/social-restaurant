@@ -66,3 +66,8 @@ iframe {
 	border-radius: 10px;
 	cursor: pointer;
 }
+
+@media screen and (max-width: 480px) {
+}
+@media screen and (max-width: 821px) and (min-width: 481px) {
+}

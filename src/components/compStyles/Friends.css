@@ -101,3 +101,8 @@
 .historyHeader {
 	padding-bottom: 5%;
 }
+
+@media screen and (max-width: 480px) {
+}
+@media screen and (max-width: 821px) and (min-width: 481px) {
+}

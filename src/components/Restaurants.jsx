@@ -13,6 +13,14 @@ const Restaurants = () => {
 			}
 		);
 	}, []);
+
+	// const addHistory = () => {
+	// 	Axios.post('https://yelporsumthin.herokuapp.com/addHistory', {
+	// 		name: name,
+	// 	}).then(() => {
+	// 		console.log('Table Updated');
+	// 	});
+	// };
 	return (
 		<div id='restPage'>
 			<h1 className='restHeading'>Near You</h1>
@@ -31,14 +39,7 @@ const Restaurants = () => {
 											<p>{val.website}</p>
 										</div>
 										<div>
-											<button
-												className='historyButton'
-												onClick={() => {
-													console.log('hey');
-												}}
-											>
-												check-in
-											</button>
+											<button className='historyButton'>check-in</button>
 										</div>
 									</div>
 								</div>

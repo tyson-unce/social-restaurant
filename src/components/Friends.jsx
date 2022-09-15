@@ -7,6 +7,7 @@ import Axios from 'axios';
 
 const Friends = () => {
 	const [discovery, showDiscovery] = useState([]);
+	const [friends, showFriends] = useState([]);
 
 	//usEffect tells it to do something on render, in this case I'm rendering the API when my component loads
 	useEffect(() => {
@@ -17,23 +18,18 @@ const Friends = () => {
 		);
 	}, []);
 
-	const addFriend = () => {
-		Axios.post('https://yelporsumthin.herokuapp.com/discovery', {
-			email: email,
-			password: password,
-		}).then(() => {
-			console.log('Table Updated');
-		});
-	};
+	// const addFriend = () => {
+	// 	Axios.post('https://yelporsumthin.herokuapp.com/discovery', {
+	// 		name: name,
+	// 		location: location,
+	// 		recent: recent,
+	// 		image: image,
+	// 	}).then(() => {
+	// 		console.log('Table Updated');
+	// 	});
+	// };
 
-	const addHistory = () => {
-		Axios.post('https://yelporsumthin.herokuapp.com/discovery', {
-			email: email,
-			password: password,
-		}).then(() => {
-			console.log('Table Updated');
-		});
-	};
+	//creating post method for inserting data from frontend
 
 	return (
 		<div>
