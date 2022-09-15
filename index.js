@@ -12,17 +12,16 @@ app.listen(process.env.PORT || 8080, () => {
 	console.log('Server is Connected!');
 });
 
-// const connection = mysql.createConnection({
-// 	host: process.env.HOST,
-// 	user: process.env.USERNAME,
-// 	password: process.env.PASSWORD,
-// 	database: process.env.DATABASE,
-// 	port: process.env.DB_PORT,
-// });
+const connection = mysql.createConnection({
+	host: process.env.HOST,
+	user: process.env.USERNAME,
+	password: process.env.PASSWORD,
+	database: process.env.DATABASE,
+	port: process.env.DB_PORT,
+});
 
 app.get('/test', (req, res) => {
 	res.send('Hello sir');
-	console.log('This is pretty cool');
 });
 
 // app.get('/users', (req, res) => {
@@ -53,9 +52,9 @@ app.get('/test', (req, res) => {
 // 	);
 // });
 // SPECIFYING IF CONNECTION TO OUR DATABASE IS SUCCESSFUL OR UNSUCCESSFUL
-// connection.connect((err) => {
-// 	if (err) {
-// 		console.log(err.message);
-// 	}
-// 	console.log('AWS is LIT');
-// });
+connection.connect((err) => {
+	if (err) {
+		console.log(err.message);
+	}
+	console.log('AWS is LIT');
+});
