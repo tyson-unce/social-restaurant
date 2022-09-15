@@ -44,23 +44,61 @@ app.get('/discovery', (req, res) => {
 	});
 });
 
-//creating post method for inserting data from frontend
-// app.post('/add', (req, res) => {
-// 	const email = req.body.email;
-// 	const password = req.body.password;
+app.get('/friends', (req, res) => {
+	connection.query('SELECT * FROM friends', (err, result) => {
+		if (err) {
+			console.log(err);
+		} else {
+			res.send(result);
+		}
+	});
+});
 
-// 	connection.query(
-// 		'INSERT INTO userInfo (email, password) VALUES (?,?)',
-// 		[email, password],
-// 		(err, result) => {
-// 			if (err) {
-// 				console.log(err);
-// 			} else {
-// 				res.send('table updated');
-// 			}
-// 		}
-// 	);
-// });
+app.get('/history', (req, res) => {
+	connection.query('SELECT * FROM my_history', (err, result) => {
+		if (err) {
+			console.log(err);
+		} else {
+			res.send(result);
+		}
+	});
+});
+
+//creating post method for inserting data from frontend
+app.post('/addHistory', (req, res) => {
+	const name = req.body.name;
+
+	connection.query(
+		'INSERT INTO my_history (name) VALUES (?)',
+		[name],
+		(err, result) => {
+			if (err) {
+				console.log(err);
+			} else {
+				res.send('table updated');
+			}
+		}
+	);
+});
+
+app.post('/addFriend', (req, res) => {
+	const name = req.body.name;
+	const location = req.body.location;
+	const recent = req.body.recent;
+	const image = req.body.image;
+
+	connection.query(
+		'INSERT INTO userInfo (name, location, recent, image) VALUES (?,?,?,?)',
+		[name, location, recent, image],
+		(err, result) => {
+			if (err) {
+				console.log(err);
+			} else {
+				res.send('table updated');
+			}
+		}
+	);
+});
 // SPECIFYING IF CONNECTION TO OUR DATABASE IS SUCCESSFUL OR UNSUCCESSFUL
 connection.connect((err) => {
 	if (err) {
