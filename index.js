@@ -24,15 +24,15 @@ app.get('/test', (req, res) => {
 	res.send('Hello sir');
 });
 
-// app.get('/users', (req, res) => {
-// 	connection.query('SELECT * FROM userInfo', (err, result) => {
-// 		if (err) {
-// 			console.log(err);
-// 		} else {
-// 			res.send(result);
-// 		}
-// 	});
-// });
+app.get('/restaurants', (req, res) => {
+	connection.query('SELECT * FROM restaurants', (err, result) => {
+		if (err) {
+			console.log(err);
+		} else {
+			res.send(result);
+		}
+	});
+});
 
 //creating post method for inserting data from frontend
 // app.post('/add', (req, res) => {
