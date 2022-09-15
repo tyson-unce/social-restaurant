@@ -8,7 +8,10 @@ const Footer = () => {
 				<div className='left box'>
 					<h2>About us</h2>
 					<div className='content'>
-						<p>lil map action</p>
+						<p>
+							Tyson's Eats is designed to give you easy access to the
+							restaurants that you love, at no cost!
+						</p>
 						<br />
 						<br />
 						<div className='socialSpacing'>
@@ -59,7 +62,7 @@ const Footer = () => {
 						</div>
 						<div className='email'>
 							<span className='fas fa-envelope'></span>
-							<span className='text'>smarT.com</span>
+							<span className='text'>tysonseats.com</span>
 						</div>
 					</div>
 				</div>

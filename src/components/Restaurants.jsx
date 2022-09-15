@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Axios from 'axios';
 const Restaurants = () => {
 	const [restaurants, showRestaurants] = useState([]);
+	const [history, addHistory] = useState('');
 
 	//usEffect tells it to do something on render, in this case I'm rendering the API when my component loads
 	useEffect(() => {
@@ -21,6 +22,7 @@ const Restaurants = () => {
 	// 		console.log('Table Updated');
 	// 	});
 	// };
+
 	return (
 		<div id='restPage'>
 			<h1 className='restHeading'>Near You</h1>
@@ -39,7 +41,20 @@ const Restaurants = () => {
 											<p>{val.website}</p>
 										</div>
 										<div>
-											<button className='historyButton'>check-in</button>
+											<button
+												onClick={() => {
+													addHistory(val.id);
+
+													// for (let i = 0; i < restaurants.length; i++) {
+													// 	if (val.id === history) {
+													// 		console.log(val.website);
+													// 	}
+													// }
+												}}
+												className='historyButton'
+											>
+												check-in
+											</button>
 										</div>
 									</div>
 								</div>
@@ -47,6 +62,27 @@ const Restaurants = () => {
 						})}
 					</div>
 				</div>
+			</div>
+			<div className='historyContainer'>
+				<h1 className='historyHeader'>
+					My History <span>+</span>
+				</h1>
+
+				{history
+					? restaurants.map((val) => {
+							for (let i = 0; i < restaurants.length; i++) {
+								if (val.id === history) {
+									return (
+										<div className='historyInfo'>
+											<h1>{val.name}</h1>
+
+											<p>time</p>
+										</div>
+									);
+								}
+							}
+					  })
+					: ''}
 			</div>
 		</div>
 	);

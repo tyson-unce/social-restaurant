@@ -16,6 +16,24 @@
 }
 
 @media screen and (max-width: 480px) {
+	#mainPage {
+		background-size: 150% 100%;
+	}
+	#mainPage h1 {
+		padding: 20%;
+		padding-right: 10%;
+		font-size: 200%;
+	}
+	#mainPage p {
+		padding-right: 0%;
+	}
 }
 @media screen and (max-width: 821px) and (min-width: 481px) {
+	#mainPage h1 {
+		padding: 17%;
+		padding-right: 40%;
+		font-size: 275%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
 }

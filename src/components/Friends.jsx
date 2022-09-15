@@ -7,7 +7,7 @@ import Axios from 'axios';
 
 const Friends = () => {
 	const [discovery, showDiscovery] = useState([]);
-	const [friends, showFriends] = useState([]);
+	const [friends, showFriends] = useState('');
 
 	//usEffect tells it to do something on render, in this case I'm rendering the API when my component loads
 	useEffect(() => {
@@ -40,19 +40,26 @@ const Friends = () => {
 				<div id='friendPage'>
 					<div className='friendContainer'>
 						<h1 className='boxHeader'>
-							Discover <span>+</span>
+							Discover <span className='plus'>+</span>
 						</h1>
+
 						{discovery.map((val) => {
 							return (
 								<div className='friendInfo'>
 									<img src={val.image}></img>
 									<h1>{val.name}</h1>
 									<div className='addFButton'>
-										<button>add friend</button>
+										<button
+											onClick={() => {
+												showFriends(val.id);
+											}}
+										>
+											add friend
+										</button>
 									</div>
 									<div>{val.location}</div>
 									<div>
-										most recent restaurant:
+										<span className='hidden'>most recent</span> restaurant:
 										<br />
 										{val.recent}
 									</div>
@@ -64,28 +71,30 @@ const Friends = () => {
 					<div></div>
 					<div className='friendContainer'>
 						<h1 className='boxHeader'>Friends</h1>
-
-						<div className='friendInfo'>
-							<img src='./images/tysonUnce.jpeg'></img>
-							<h1>Samantha</h1>
-							<div className='addFButton'></div>
-							<div>pville</div>
-							<div>
-								most recent restaurant:
-								<br />
-								thai's
-							</div>
-						</div>
-					</div>
-				</div>
-				<div className='historyContainer'>
-					<h1 className='historyHeader'>
-						My History <span>+</span>
-					</h1>
-					<div className='historyInfo'>
-						<h1>El Rincon</h1>
-
-						<p>time</p>
+						{friends
+							? discovery.map((val) => {
+									for (let i = 0; i < discovery.length; i++) {
+										if (val.id === friends) {
+											return (
+												<div className='friendInfo'>
+													<img src={val.image}></img>
+													<h1>{val.name}</h1>
+													<div className='addFButton'>
+														<button>favorite</button>
+													</div>
+													<div>{val.location}</div>
+													<div>
+														<span className='hidden'>most recent</span>
+														restaurant:
+														<br />
+														{val.recent}
+													</div>
+												</div>
+											);
+										}
+									}
+							  })
+							: ''}
 					</div>
 				</div>
 			</div>

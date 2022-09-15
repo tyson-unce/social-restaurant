@@ -67,7 +67,43 @@ iframe {
 	cursor: pointer;
 }
 
+#restpage span {
+	color: red;
+}
+
 @media screen and (max-width: 480px) {
+	.restContent {
+		text-align: center;
+		display: grid;
+		grid-template-columns: 100%;
+		margin-right: 1%;
+	}
+	iframe {
+		height: 602px;
+		width: 99%;
+		margin-bottom: 5%;
+		margin-left: 0.15%;
+		border-color: black;
+		border-style: solid;
+		border-width: 3px;
+	}
+	.divScrolly {
+		overflow: auto;
+		height: 300px;
+		border-style: solid;
+		border-width: 3px;
+		border-color: black;
+		padding: 4%;
+		margin-left: 1%;
+	}
 }
 @media screen and (max-width: 821px) and (min-width: 481px) {
+	.divScrolly {
+		overflow: auto;
+		height: 575px;
+		border-style: solid;
+		border-width: 3px;
+		border-color: black;
+		padding: 4%;
+	}
 }
